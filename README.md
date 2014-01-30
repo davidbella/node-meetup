@@ -273,3 +273,6 @@ The important call here is the `render` function. This function looks very confu
 
 #####Create it!
 Up until this point we have just been doing set up. The key to it all is creating an `ItemLibraryView`. This will kick everything off in its `initialize` function.
+
+##branch 'backbone-collection'
+###Simple Pub Sub with Faye
