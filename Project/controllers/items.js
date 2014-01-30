@@ -12,7 +12,11 @@ db.open(function (err, db) {
 });
 
 exports.findAll = function(req, res) {
-
+  db.collection('items-collection', function(err, collection) {
+    collection.find().toArray(function(err, items) {
+      res.send(items);
+    });
+  });
 };
 
 exports.findById = function(req, res) {
