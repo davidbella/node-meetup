@@ -1,16 +1,17 @@
 <html>
   <head>
     <title>Node and Backbone are Awesome!</title>
+    <link rel="stylesheet" href="css/simple.css">
   </head>
 
   <body>
     <div id="items">
       <script id="itemTemplate", type="text/template">
-        <%= name %>
-        <%= points %>
+        <p><%= name %></p>
+        <p><%= points %></p>
       </script>
     </div>
-
+    <script type="text/javascript" src="http://localhost:3001/faye/client.js"></script>
     <script src="js/jquery-2.0.3.js"></script>
     <script src="js/underscore.js"></script>
     <script src="js/backbone.js"></script>

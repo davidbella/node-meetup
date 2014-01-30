@@ -1,0 +1,7 @@
+.itemContainer {
+  height: 100px;
+  width: 300px;
+  text-align: center;
+  border: 1px solid #222;
+  margin: 5px;
+}

@@ -73,4 +73,15 @@
   });
 
   var itemLibraryView = new ItemLibraryView();
+  itemLibraryView.on('faye', function () {
+    itemLibraryView.collection.fetch();
+    itemLibraryView.collection.reset();
+    itemLibraryView.render();
+  });
+
+  var fayeClient = new Faye.Client('http://localhost:3001/faye');
+  var sub = fayeClient.subscribe('/faye', function() {
+    console.log("message received!");
+    itemLibraryView.trigger('faye');
+  });
 })(jQuery);
