@@ -3,6 +3,8 @@ var express = require('express'),
 
 var app = express();
 
+app.use(express.bodyParser());
+
 app.get('/', function (req, res) {
     res.end('Hello Node!');
 });
