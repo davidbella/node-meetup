@@ -12,3 +12,5 @@ app.get('/items/:id', items.findById);
 app.post('/items', items.addItem);
 app.put('/items/:id', items.updateItem);
 app.delete('/items/:id', items.deleteItem);
+
+app.listen(3000);
