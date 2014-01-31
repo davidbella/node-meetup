@@ -212,7 +212,7 @@ For convenience, here is a mini Mongo cheatsheet to get up and running (I actual
 
 Notice how each of these URLs will hit a specific route with a specific HTTP verb. We defined all of these routes in our `server.js` file. Further, we provided functions in the `controllers/items.js` controller to handle these requests, namely, interacting with the Mongo back end database.
 
-##branch 'controller-actions-in-mongo'
+##branch 'controller-actions-to-mongo'
 ###Backbone.js
 Backbone.js is a JavaScript library primarily targeted to the front end to help organize and display content. Technically, backbone implements the Model-View-Presenter pattern. Since our backend is just a simple REST API, using something like backbone on the frontend can help give our application more structure.
 
