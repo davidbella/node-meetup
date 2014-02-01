@@ -1,8 +1,8 @@
 ##Get the Repository
 Clone the git repository locally
 
-    git clone ....
-    
+    git clone git@github.com:davidbella/node-meetup.git
+
 Start in the `start` branch and follow along
 
     git checkout start
@@ -19,9 +19,15 @@ Uh oh! Error that you need mongodb package
     npm install mongodb
 
 ###Install Mongo DB and Fire It Up!
+On Mac, through `brew`:
+
     brew install mongodb
     mkdir -p /data/db # Maybe - try the next step first
     mongod
+
+If you don't have brew, I recommend getting it, but there are manual installation instructions on the [MongoDB website](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/)
+
+On Windows, if you don't have a Mac, I recommend getting one ;) but there are installation instructions [here](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/)
 
 Open a new terminal window and run the server again
 
@@ -110,7 +116,7 @@ Each of the lines that start with `export` you will notice match up to the funct
 
 `export`s allows you to create functions that can be used when someone `require`s this module into their code.
 
-##branch 'install-node-modules'
+##branch 'controller-actions-to-mongo'
 ###Controller Actions
 We'll start with the `findAll` function and then work our way through the REST of the REST operations, heh. While we do so, we will highlight any differences between the functions.
 
@@ -212,7 +218,7 @@ For convenience, here is a mini Mongo cheatsheet to get up and running (I actual
 
 Notice how each of these URLs will hit a specific route with a specific HTTP verb. We defined all of these routes in our `server.js` file. Further, we provided functions in the `controllers/items.js` controller to handle these requests, namely, interacting with the Mongo back end database.
 
-##branch 'controller-actions-to-mongo'
+##branch 'backbone-collection'
 ###Backbone.js
 Backbone.js is a JavaScript library primarily targeted to the front end to help organize and display content. Technically, backbone implements the Model-View-Presenter pattern. Since our backend is just a simple REST API, using something like backbone on the frontend can help give our application more structure.
 
@@ -274,5 +280,4 @@ The important call here is the `render` function. This function looks very confu
 #####Create it!
 Up until this point we have just been doing set up. The key to it all is creating an `ItemLibraryView`. This will kick everything off in its `initialize` function.
 
-##branch 'backbone-collection'
 ###Simple Pub Sub with Faye
