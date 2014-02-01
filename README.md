@@ -281,3 +281,8 @@ The important call here is the `render` function. This function looks very confu
 Up until this point we have just been doing set up. The key to it all is creating an `ItemLibraryView`. This will kick everything off in its `initialize` function.
 
 ###Simple Pub Sub with Faye
+Coming Soon!
+
+##Special Thanks To
+[Roman Sharf](https://github.com/pencilking2002)
+[Martin Burch](https://github.com/martinburch)
